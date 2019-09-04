@@ -1,0 +1,189 @@
+* 0. Arduino?
+- O quê é?
+  - https://www.arduino.cc/
+- O quê dá para fazer?
+  - https://www.instructables.com/id/Arduino-Line-Follower-Robot-1/
+  - https://www.instructables.com/id/coin-slot-detector/
+  - https://vimeo.com/45422593
+  - https://youtu.be/JCiXV6b7N0A
+  - https://www.instructables.com/member/amandaghassaei/instructables/
+
+*** 0.1 INSTALAÇÃO
+- https://www.arduino.cc/en/Main/Software
+
+**** 0.1.1 DRIVERS
+- Arduinos chineses (muitas vezes) precisam de drivers extras para funcionar.
+- Buscar por "CH340 Arduino driver" + o nome do seu sistema operativo.
+  - http://www.wch.cn/download/CH341SER_MAC_ZIP.html
+  - http://www.wch.cn/download/CH341SER_EXE.html
+
+
+* 1. BLINK
+1. copiar e colar o código abaixo em uma janela nova da Arduino IDE
+2. selecionar a placa e porta correta em ~Tools -> Board~ e ~Tools -> Port~
+3. salvar o arquivo
+4. fazer upload
+
+*** 1.1 CÓDIGO
+#+BEGIN_SRC c
+int pinoLed = 13;
+
+void setup()
+{
+  pinMode(pinoLed, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pinoLed, HIGH);
+  delay(1000);
+  digitalWrite(pinoLed, LOW);
+  delay(500);  
+}
+#+END_SRC
+
+*** 1.2 COMENTÁRIOS
+- estrutura de pastas
+- regras de nomenclatura
+
+*** 1.3 MODS
+- o que vocês mudariam nesse código?
+
+
+* 2. ~tone()~
+
+*** 2.1 CÓDIGO
+/exemplos_WorkshopSomar/tone_02/tone_02.ino/
+
+*** 2.2 CIRCUITO
+/exemplos_WorkshopSomar/tone_02/tone_02.png/
+
+*** 2.3 COMENTÁRIOS
+- ~void setup()~ e ~void loop()~
+- funções & argumentos
+- RTFM
+- sintaxe
+
+*** 2.4 MODS
+- "Only one tone can be generated at a time"
+#+BEGIN_SRC c
+// pode isso então?
+void loop()
+{
+  tone(5, 100); 
+  tone(5, 101);
+}
+#+END_SRC
+
+
+* 3. ~delay()~
+
+*** 2.1 CÓDIGO
+/exemplos_WorkshopSomar/toneDelay_03/toneDelay_03.ino/
+
+*** 2.2 COMENTÁRIOS
+- comentários!
+- quantidade de argumentos
+- ordem/tempo de execução
+
+*** 2.3 MODS
+- agora vários sons em sequência!
+
+#+BEGIN_SRC c
+void loop()
+{
+  tone(5, 100, 90);
+  delay(100);
+  tone(5, 200, 90);
+  delay(100);
+  tone(5, 300, 90);
+  delay(100);
+  tone(5, 400, 90);
+  delay(100);
+}
+#+END_SRC
+
+- que valores de frequência escolher?
+  - razões perfeitas (dobro, metade, 1/3, etc)
+  - progressões geométricas e/ou aritméticas
+  - notas musicais: http://pages.mtu.edu/~suits/notefreqs.html
+  - qualquer um!
+
+
+* 4. VARIÁVEIS
+** 4.1 EXEMPLO 1
+*** 4.1.1 CÓDIGO
+/exemplos_WorkshopSomar/toneVar_04_problema/toneVar_04_problema.ino/
+
+/exemplos_WorkshopSomar/toneVar_05_problema/toneVar_05_solucao.ino/
+
+- stranger tempo...
+  - https://www.youtube.com/watch?v=-RcPZdihrp4
+
+*** 4.1.2 COMENTÁRIOS 
+- convenção de nomenclatura
+
+*** 4.1.3 MOD
+- mudar coluna para o pino 7
+
+** 4.2 EXEMPLO 2
+*** 4.2.1 CÓDIGO
+/exemplos_WorkshopSomar/varOperacao_06/varOperacao_06.ino/
+
+*** 4.2.2 COMENTÁRIOS
+- ~tone(pinoColuna, freqBase + 100, 90);~ muda o valor da variável ~freqBase~?
+
+*** 4.2.3 MODS
+- como fazer a duração do som ser /em função/ do tempo de delay?
+
+  
+* 5. ~random()~
+*** 5.1 CÓDIGO
+/exemplos_WorkshopSomar/random_07/random_07.ino/
+
+*** 5.1 COMENTÁRIOS
+- função como argumento de outra função / modularidade
+- numero enquanto abstração
+
+*** 5.2 MODS
+- noise!
+
+#+BEGIN_SRC c
+void loop()
+{
+  tone(pinoColuna, random(100, 500));
+}
+#+END_SRC
+
+- qual a diferença entre /delayRandom_08.ino/ e /delayRandom_09.ino/?
+
+
+* 6. ~if()~
+*** 6.1 CÓDIGO
+/exemplos_WorkshopSomar/if_10/if_10.ino/
+
+/exemplos_WorkshopSomar/if_11/if_11.ino/
+
+*** 6.2 COMENTÁRIOS
+- testes de ~TRUE~ e ~FALSE~
+- erro de sintaxe vs. erro de lógica
+- ~=~ vs. ~==~
+
+*** 6.3 MODS
+- como mudar a probabilidade?
+
+
+* 7. ITERAÇÃO 
+*** 7.1 CÓDIGO
+/exemplos_WorkshopSomar/iteracao_12/iteracao_12.ino/
+
+*** 7.2 COMENTÁRIOS
+- ~x = x + 1~
+
+*** 7.3 MODS
+- como fazer subir mais rápido, /e depois voltar/?
+
+
+* 8. TUDO JUNTO E MISTURADO
+- /exemplos_WorkshopSomar/tudoJunto_13/tudoJunto_13.ino/
+- Esse código usa todos os conceitos vistos até agora em um único exemplo. Como?
