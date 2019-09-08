@@ -97,16 +97,29 @@ void loop()
 
 * 3. ~delay()~
 
-*** 2.1 CÓDIGO
-/exemplos_WorkshopSomar/toneDelay_03/toneDelay_03.ino/
+*** 2.1 CODE
+~/examples_workshopOrpheus/toneDelay_03/toneDelay_03.ino~
 
-*** 2.2 COMENTÁRIOS
-- comentários!
-- quantidade de argumentos
-- ordem/tempo de execução
+#+BEGIN_SRC c
+void setup()
+{
+  
+}
+
+void loop()
+{
+  tone(5, 100, 500); //now with 3 arguments!
+  delay(1000);
+}
+#+END_SRC
+
+*** 2.2 NOTES
+- Comments
+- Ammount of arguments
+- Order/execution time
 
 *** 2.3 MODS
-- agora vários sons em sequência!
+- Now we can make several sound in sequence...
 
 #+BEGIN_SRC c
 void loop()
@@ -122,11 +135,11 @@ void loop()
 }
 #+END_SRC
 
-- que valores de frequência escolher?
-  - razões perfeitas (dobro, metade, 1/3, etc)
-  - progressões geométricas e/ou aritméticas
-  - notas musicais: http://pages.mtu.edu/~suits/notefreqs.html
-  - qualquer um!
+- What frequency values to choose?
+  - Rational ratios (double, half, 1/3, etc)
+  - Arithmetic and geometric sequences
+  - Musical pitches: http://pages.mtu.edu/~suits/notefreqs.html
+  - Any value!
 
 
 * 4. VARIÁVEIS
