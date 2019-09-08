@@ -58,23 +58,35 @@ void loop()
 * 2. ~tone()~
 
 *** 2.1 CODE
-~/examples_workshopOrpheus/tone_02/tone_02.ino/~
+~/examples_workshopOrpheus/tone_02/tone_02.ino~
+
+#+BEGIN_SRC c
+void setup()
+{
+  
+}
+
+void loop()
+{
+  tone(5, 100);
+}
+#+END_SRC
 
 *** 2.2 CIRCUIT
 ~/exemplos_WorkshopSomar/tone_02/tone_02.png~
 
 [[/examples_workshopOrpheus/tone_02/tone_02.png]]
 
-*** 2.3 COMENTÁRIOS
-- ~void setup()~ e ~void loop()~
-- funções & argumentos
+*** 2.3 NOTES
+- ~void setup()~ and ~void loop()~
+- Functions & arguments
 - RTFM
-- sintaxe
+- Syntax
 
 *** 2.4 MODS
-- "Only one tone can be generated at a time"
+- From ~tone()~ reference: "Only one tone can be generated at a time"
 #+BEGIN_SRC c
-// pode isso então?
+// can you do this then?
 void loop()
 {
   tone(5, 100); 
