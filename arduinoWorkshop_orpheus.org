@@ -24,12 +24,12 @@
 
 
 * 1. BLINK
-1. copiar e colar o código abaixo em uma janela nova da Arduino IDE
-2. selecionar a placa e porta correta em ~Tools -> Board~ e ~Tools -> Port~
-3. salvar o arquivo
-4. fazer upload
+1. Open a new Arduino IDE, delete everything, copy and paste the code below
+2. Select the correct board and port in ~Tools -> Board~ and ~Tools -> Port~
+3. Save the file
+4. Upload it
 
-*** 1.1 CÓDIGO
+*** 1.1 CODE
 #+BEGIN_SRC c
 int pinoLed = 13;
 
