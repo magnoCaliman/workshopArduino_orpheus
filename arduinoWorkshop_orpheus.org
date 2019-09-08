@@ -58,10 +58,11 @@ void loop()
 * 2. ~tone()~
 
 *** 2.1 CODE
-/exemplos_WorkshopSomar/tone_02/tone_02.ino/
+/examples_workshopOrpheus/tone_02/tone_02.ino/
 
-*** 2.2 CIRCUITO
+*** 2.2 CIRCUIT
 /exemplos_WorkshopSomar/tone_02/tone_02.png/
+file:foo.png
 
 *** 2.3 COMENTÁRIOS
 - ~void setup()~ e ~void loop()~
