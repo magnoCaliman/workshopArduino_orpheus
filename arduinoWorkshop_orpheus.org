@@ -57,7 +57,7 @@ void loop()
 
 * 2. ~tone()~
 
-*** 2.1 CÓDIGO
+*** 2.1 CODE
 /exemplos_WorkshopSomar/tone_02/tone_02.ino/
 
 *** 2.2 CIRCUITO
