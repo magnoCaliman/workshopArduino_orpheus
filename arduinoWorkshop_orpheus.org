@@ -274,7 +274,7 @@ void loop()
 
 *** 5.1 NOTES
 - Functions as arguments for other functions / modularity as a principle
-- Numeric value as an abstract concept
+- Numeric value as an abstract concept *refrasear*
 
 *** 5.2 MODS
 - Noise!
