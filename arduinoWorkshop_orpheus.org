@@ -253,7 +253,7 @@ void loop()
   
 
 * 5. ~random()~
-*** 5.1 CÓDIGO
+*** 5.1 CODE
 ~examples_orkshopOrpheus/random_07/random_07.ino~
 
 #+BEGIN_SRC c
