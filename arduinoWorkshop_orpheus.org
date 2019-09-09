@@ -254,14 +254,30 @@ void loop()
 
 * 5. ~random()~
 *** 5.1 CÓDIGO
-/exemplos_WorkshopSomar/random_07/random_07.ino/
+~examples_orkshopOrpheus/random_07/random_07.ino~
 
-*** 5.1 COMENTÁRIOS
-- função como argumento de outra função / modularidade
-- numero enquanto abstração
+#+BEGIN_SRC c
+int pinSpeaker = 7;
+int delayTime = 100;
+
+void setup()
+{
+  
+}
+
+void loop()
+{
+  tone(pinSpeaker, random(100, 500), 90);
+  delay(delayTime);
+}
+#+END_SRC
+
+*** 5.1 NOTES
+- Functions as arguments for other functions / modularity as a principle
+- Numeric value as an abstract concept
 
 *** 5.2 MODS
-- noise!
+- Noise!
 
 #+BEGIN_SRC c
 void loop()
@@ -270,7 +286,7 @@ void loop()
 }
 #+END_SRC
 
-- qual a diferença entre /delayRandom_08.ino/ e /delayRandom_09.ino/?
+- Without playing, can you tell the diference in behaviour between ~delayRandom_08.ino~ and ~delayRandom_09.ino~?
 
 
 * 6. ~if()~
