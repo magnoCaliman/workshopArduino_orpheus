@@ -180,7 +180,7 @@ void loop()
 
 ~examples_WorkshopOrpheus/toneVar_05_solution/toneVar_05_solution.ino~
 
-- *There's your problem...*
+- *TODO There's your problem...*
 
 #+BEGIN_SRC c
 int delayTime = 180;
@@ -211,7 +211,7 @@ void loop()
 }
 #+END_SRC
 
-*** 4.1.2 COMENTÁRIOS 
+*** 4.1.2 NOTES 
 - Naming conventions
 
 *** 4.1.3 MODS
@@ -249,7 +249,7 @@ void loop()
 - What's the value of ~baseFreq~ at line 12? And 14?
 
 *** 4.2.3 MODS
-- How can we make the duratin of the sound /proportional/ to the time between those sounds? For example, always 10% smaller? *refrasear*
+- How can we make the duratin of the sound /proportional/ to the time between those sounds? For example, always 10% smaller? *TODO refrasear*
   
 
 * 5. ~random()~
@@ -274,7 +274,7 @@ void loop()
 
 *** 5.1 NOTES
 - Functions as arguments for other functions / modularity as a principle
-- Numeric value as an abstract concept *refrasear*
+- Numeric value as an abstract concept *TODO refrasear*
 
 *** 5.2 MODS
 - Noise!
@@ -286,25 +286,121 @@ void loop()
 }
 #+END_SRC
 
-- Without playing, can you tell the diference in behaviour between ~delayRandom_08.ino~ and ~delayRandom_09.ino~?
+- Without runnig the code, can you tell the diference in behaviour between ~delayRandom_08.ino~ and ~delayRandom_09.ino~?
 
 
 * 6. ~if()~
-*** 6.1 CÓDIGO
-/exemplos_WorkshopSomar/if_10/if_10.ino/
+** 6.1 EXAMPLE 1
+*** 6.1.1 CODE
+~exemplos_WorkshopSomar/if_10/if_10.ino~
 
-/exemplos_WorkshopSomar/if_11/if_11.ino/
+#+BEGIN_SRC c
+int pinSpeaker = 7;
+int delayTime = 100;        //rever esses valores
+int durSomLongo = 150;      //talvez retirar variáveis de dur
+int durSomCurto = 40;
 
-*** 6.2 COMENTÁRIOS
-- testes de ~TRUE~ e ~FALSE~
-- erro de sintaxe vs. erro de lógica
+void setup()
+{
+
+}
+
+void loop()
+{
+  int dado = random(0, 10);
+
+  if (dado < 5)
+  {
+    tone(pinSpeaker, 100, durSomLongo);
+    delay(delayTime);
+    tone(pinSpeaker, 150, durSomLongo);
+    delay(delayTime);
+    tone(pinSpeaker, 180, durSomLongo);
+    delay(delayTime);
+    tone(pinSpeaker, 120, durSomLongo);
+    delay(delayTime);
+  }
+
+  if (dado > 5)
+  {
+    tone(pinSpeaker, 300, durSomCurto);
+    delay(delayTime);
+    tone(pinSpeaker, 350, durSomCurto);
+    delay(delayTime);
+    tone(pinSpeaker, 480, durSomCurto);
+    delay(delayTime);
+    tone(pinSpeaker, 450, durSomCurto);
+    delay(delayTime);
+  }
+}
+#+END_SRC
+
+*** 6.1.2 NOTES
+- ~TRUE~ and ~FALSE~ logic
+- Syntax errors vs. logic errors
+
+*** 6.1.3 MODS
+- How can you change the probability of events?
+
+** 6.2 EXAMPLE 2
+*** 6.2.1 CODE
+~exemplos_WorkshopSomar/if_11/if_11.ino~
+
+#+BEGIN_SRC c
+int pinSpeaker = 7;
+int delayTime = 180;
+int dur;
+
+void setup()
+{
+
+}
+
+void loop()
+{
+  int dado = random(0, 2);
+
+  if (dado == 0)
+  {
+    dur = 40;
+  }
+
+  if (dado == 1)
+  {
+    dur = 180;  
+  }
+  
+  tone(pinSpeaker,65, dur);
+  delay(delayTime);
+  tone(pinSpeaker,82, dur);
+  delay(delayTime);
+  tone(pinSpeaker,98, dur);
+  delay(delayTime);
+  tone(pinSpeaker,123, dur);
+  delay(delayTime);
+  tone(pinSpeaker,130, dur);
+  delay(delayTime);
+  tone(pinSpeaker,123, dur);
+  delay(delayTime);
+  tone(pinSpeaker,98, dur);
+  delay(delayTime);
+  tone(pinSpeaker,82, dur);
+  delay(delayTime);
+}
+#+END_SRC
+
+*** 6.2.1 NOTES
 - ~=~ vs. ~==~
+- if para modificar valores (mão invisível que modula os 'entry points') *TODO refrasear* 
 
 *** 6.3 MODS
-- como mudar a probabilidade?
+- *TODO*
+
+** 6.2 EXAMPLE 3
+*TODO* - ~if() else~ (talvez deixar para exemplos com sensores? botão...)
 
 
-* 7. ITERAÇÃO 
+* 7. ITERAÇÃO
 *** 7.1 CÓDIGO
 /exemplos_WorkshopSomar/iteracao_12/iteracao_12.ino/
 
