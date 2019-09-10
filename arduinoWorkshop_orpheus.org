@@ -295,7 +295,7 @@ void loop()
 ~exemplos_WorkshopSomar/if_10/if_10.ino~
 
 #+BEGIN_SRC c
-int pinSpeaker = 7;
+int pinSpeaker = 7;         //TODO
 int delayTime = 100;        //rever esses valores
 int durSomLongo = 150;      //talvez retirar variáveis de dur
 int durSomCurto = 40;
