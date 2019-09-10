@@ -400,15 +400,34 @@ void loop()
 *TODO* - ~if() else~ (talvez deixar para exemplos com sensores? botão...)
 
 
-* 7. ITERAÇÃO
-*** 7.1 CÓDIGO
-/exemplos_WorkshopSomar/iteracao_12/iteracao_12.ino/
+* 7. ITERATION
+*** 7.1 CODE
+~exemplos_WorkshopSomar/iteracao_12/iteracao_12.ino~
 
-*** 7.2 COMENTÁRIOS
-- ~x = x + 1~
+#+BEGIN_SRC c
+int pinSpeaker = 7;
+int freq = 31;
+
+void setup()
+{
+
+}
+
+void loop()
+{
+  tone(pinSpeaker, freq);
+
+  freq = freq + 1;
+
+  delay(500);
+}
+#+END_SRC
+
+*** 7.2 NOTES
+- ~x = x + 1 is mathematically untrue, but computationally valid~
 
 *** 7.3 MODS
-- como fazer subir mais rápido, /e depois voltar/?
+- How can you make it rise faster, /and then restart/?
 
 
 * 8. TUDO JUNTO E MISTURADO
