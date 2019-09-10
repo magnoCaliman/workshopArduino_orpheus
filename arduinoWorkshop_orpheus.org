@@ -433,7 +433,7 @@ void loop()
 * 8. TUDO JUNTO E MISTURADO
 ~exemplos_WorkshopSomar/tudoJunto_13/tudoJunto_13.ino~
 
-- This code uses all the concepts shown up intill now, mixed in a single example. How?
+- This code uses all the concepts shown up untill now, mixed in a single example. How?
 - What are the entry points to it?
 
 #+BEGIN_SRC c
