@@ -431,5 +431,34 @@ void loop()
 
 
 * 8. TUDO JUNTO E MISTURADO
-- /exemplos_WorkshopSomar/tudoJunto_13/tudoJunto_13.ino/
-- Esse código usa todos os conceitos vistos até agora em um único exemplo. Como?
+~exemplos_WorkshopSomar/tudoJunto_13/tudoJunto_13.ino~
+
+- This code uses all the concepts shown up intill now, mixed in a single example. How?
+- What are the entry points to it?
+
+#+BEGIN_SRC c
+int pinSpeaker = 7;
+int delayTime = 100;
+int dur = 90;
+int randMax = 55;
+
+void setup()
+{
+
+}
+
+void loop()
+{
+  int freqGliss = random(50, randMax);
+  
+  tone(pinSpeaker, freqGliss, dur);
+  delay(delayTime);
+
+  randMax = randMax + 5;
+
+  if (randMax > 500)
+  {
+    randMax = 55;  
+  }
+}
+#+END_SRC
