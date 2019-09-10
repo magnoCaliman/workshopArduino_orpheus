@@ -424,7 +424,7 @@ void loop()
 #+END_SRC
 
 *** 7.2 NOTES
-- ~x = x + 1 is mathematically untrue, but computationally valid~
+- ~x = x + 1~ is mathematically untrue, but computationally valid
 
 *** 7.3 MODS
 - How can you make it rise faster, /and then restart/?
