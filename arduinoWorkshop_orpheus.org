@@ -95,7 +95,7 @@ void loop()
 
 * 3. ~delay()~
 
-*** 2.1 CODE
+*** 3.1 CODE
 ~/examples_workshopOrpheus/toneDelay_03/toneDelay_03.ino~
 
 #+BEGIN_SRC c
@@ -111,13 +111,13 @@ void loop()
 }
 #+END_SRC
 
-*** 2.2 NOTES
+*** 3.2 NOTES
 - Comments
 - Amount of arguments
 - Order/execution time
 
-*** 2.3 MODS
-- Now we can make several sound in sequence...
+*** 3.3 MODS
+- Now we can make several sounds in sequence...
 
 #+BEGIN_SRC c
 void loop()
@@ -176,9 +176,9 @@ void loop()
 }
 #+END_SRC
 
-~examples_WorkshopOrpheus/toneVar_05_solution/toneVar_05_solution.ino~
+- There's your problem...
 
-- *TODO There's your problem...*
+~examples_WorkshopOrpheus/toneVar_05_solution/toneVar_05_solution.ino~
 
 #+BEGIN_SRC c
 int delayTime = 180;
