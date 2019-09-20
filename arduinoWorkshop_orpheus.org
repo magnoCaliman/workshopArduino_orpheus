@@ -56,7 +56,7 @@ void loop()
 * 2. ~tone()~
 
 *** 2.1 CIRCUIT
-~/exemplos_WorkshopSomar/tone_02/tone_02.png~
+~/examples_WorkshopOrpheus/tone_02/tone_02.png~
 
 [[/examples_workshopOrpheus/tone_02/tone_02.png]]
 
@@ -217,7 +217,7 @@ void loop()
 
 ** 4.2 EXAMPLE 2
 *** 4.2.1 CODE
-~exemplos_WorkshopSomar/varOperacao_06/varOperacao_06.ino~
+~examples_WorkshopOrpheus/varOperacao_06/varOperacao_06.ino~
 
 #+BEGIN_SRC c
 int pinSpeaker = 7;
@@ -291,7 +291,7 @@ void loop()
 * 6. ~if()~
 ** 6.1 EXAMPLE 1
 *** 6.1.1 CODE
-~exemplos_WorkshopSomar/if_10/if_10.ino~
+~examples_WorkshopOrpheus/if_10/if_10.ino~
 
 #+BEGIN_SRC c
 int pinSpeaker = 7;         //TODO
@@ -343,7 +343,7 @@ void loop()
 
 ** 6.2 EXAMPLE 2
 *** 6.2.1 CODE
-~exemplos_WorkshopSomar/if_11/if_11.ino~
+~examples_WorkshopOrpheus/if_11/if_11.ino~
 
 #+BEGIN_SRC c
 int pinSpeaker = 7;
@@ -401,7 +401,7 @@ void loop()
 
 * 7. ITERATION
 *** 7.1 CODE
-~exemplos_WorkshopSomar/iteracao_12/iteracao_12.ino~
+~examples_WorkshopOrpheus/iteration_12/iteration_12.ino~
 
 #+BEGIN_SRC c
 int pinSpeaker = 7;
