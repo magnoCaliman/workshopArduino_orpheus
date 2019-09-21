@@ -295,8 +295,8 @@ void loop()
 
 #+BEGIN_SRC c
 int pinSpeaker = 7;
-int delayTime = 100;        //rever esses valores
-int longDur = 150;      //talvez retirar variáveis de dur
+int delayTime = 100;        
+int longDur = 150;      
 int shortDur = 40;
 
 void setup()
